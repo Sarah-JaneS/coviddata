@@ -1,23 +1,21 @@
 function preload() {
   table = loadTable ('coviddatanz.csv', 'csv', 'header');
-  bubble = loadImage ('img/bacteriasimple.svg')
-  nz = loadImage('img/map.png');
+  bubble = loadImage ('img/bacteria2.svg')
+  nz = loadImage('img/map3.png');
 }
 
-function drawCircle() {
-  fill()
-  ellipse(200, 200, 200)
-}
 
+function total() {
+  let val = random(255);
+  background(val);
+}
 
 //TOTAL CASES
 function setup (){
   createCanvas(800, 600);
-
   textAlign(CENTER, TOP);
-  image(nz, 100, 100, 500,300);
+  image(nz, 0, 0, 509, 582);
   noFill();
-
   for (let r=0;r < table.getRowCount(); r++){
     const name = table.getString (r, "Location");
     const cases = table.getNum (r, "Total");
@@ -25,26 +23,28 @@ function setup (){
     const y = table.getNum (r, "Y");
     const size = map(cases, 0, 1350, 0, 100)
     //ellipse (x, y, size)
-    image(bubble, x, y, size, size)
-    text(name, x , y, size / 2)
-  }
+    stroke('white')
+    fill(13,199,32,80)
+    ellipse(x - size/2 , y - size/2, size, size)
+  }  
 
-  button = createButton('draw a circle');
-  button.position(100, 100);
-  button.mousePressed(drawCircle);
-  /*
+    button = createButton('click me');
+    button.position(0, 0);
+    button.mousePressed(total);
+    //image(bubble, x - size/2 , y - size/2, size, size)
+    //text(name, x , y, size / 2)
+  
+
     for (let r=0;r < table.getRowCount(); r++){
       const name = table.getString (r, "Location");
       const actcases = table.getNum (r, "Active");
-      const x = random (0, width);
-      const y = random (0, height);
+      const x = table.getNum (r, "X");
+      const y = table.getNum (r, "Y");
       const size = map(actcases, 0, 1350, 0, 300 )
-      fill(255,204,0)
-      ellipse (x, y, size)
-      text(name, x , y, size / 2)
+      fill(255,204,0,80)
+      ellipse (x - size/2 , y - size/2, size, size)
         
     }
-    */
   }
 
 // put drawing code here
