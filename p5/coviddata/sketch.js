@@ -5,6 +5,24 @@ function preload() {
   nz = loadImage('img/map.svg');
 }
 
+//TODAY's CASES
+function today (){
+  for (let r=0;r < table.getRowCount(); r++){
+    const name = table.getString (r, "Location");
+    const actcases = table.getNum (r, "New");
+    const x = table.getNum (r, "X");
+    const y = table.getNum (r, "Y");
+    const size = map(actcases, 0, 1350, 0, 300 )
+    fill(100,100,0,80)
+    ellipse (x - size/2 , y - size/2, size, size)
+    button = createButton('New cases');
+    button.position(100, 0);
+    button.size(250, 100);
+    button.mousePressed(setup);
+  }
+}
+
+
 //CURRENT ACTIVE CASES
 function act(){
   for (let r=0;r < table.getRowCount(); r++){
@@ -61,6 +79,11 @@ function setup (){
     button.position(100, 300);
     button.size(250, 100);
     button.mousePressed(act);
+
+    button = createButton('New cases');
+    button.position(100, 0);
+    button.size(250, 100);
+    button.mousePressed(today);
     
     //image(bubble, x - size/2 , y - size/2, size, size)
     //text(name, x , y, size / 2)
