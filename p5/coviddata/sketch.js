@@ -47,7 +47,7 @@ function total() {
 }
 
 function setup (){
-  createCanvas(800, 600);
+  createCanvas(windowWidth, windowHeight);
   textAlign(CENTER, TOP);
   image(nz, 0, 0, 509, 582);
   noFill();
@@ -72,5 +72,4 @@ function draw() {
   //image(nz, 100, 100, 500,300)
   //image(bubble, 400, 200, 50, 50)
 }
-
 

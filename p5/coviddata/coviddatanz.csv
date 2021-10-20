@@ -1,21 +1,21 @@
-Location,Active,Total,X,Y
-Auckland,104,585, 327,116
-Bay of Plenty,0,48,392,179
-Canterbury,0,168, 244,408
-Capital and Coast,0,113,337,314
-Counties Manukau,248,1330,348,150
-Hawke's Bay,0,44,406,228
-Hutt Valley,0,24,347,312
-Lakes,0,16,380,189
-Mid Central,0,33, 374,281
-Nelson Marlborough,0,49,290,328
-Northland,0,28,303,71
-South Canterbury,0,17, 202,455
-Southern,0,217,175,509
-Tairāwhiti,0,4,443,192
-Taranaki,0,16,310,233
-Waikato,42,240, 355,169
-Wairarapa,0,8, 369,297
-Waitematā,239,787, 330,116
-West Coast,0,5, 223,358
-Whanganui,0,9, 344,258
+Location,Active,Total,X,Y,New
+Auckland,104,585, 327,116,57
+Bay of Plenty,0,48,392,179,0
+Canterbury,0,168, 244,408,0
+Capital and Coast,0,113,337,314,0
+Counties Manukau,248,1330,348,150,0
+Hawke's Bay,0,44,406,228,0
+Hutt Valley,0,24,347,312,0
+Lakes,0,16,380,189,0
+Mid Central,0,33, 374,281,0
+Nelson Marlborough,0,49,290,328,0
+Northland,0,28,303,71,0
+South Canterbury,0,17, 202,455,0
+Southern,0,217,175,509,0
+Tairāwhiti,0,4,443,192,0
+Taranaki,0,16,310,233,0
+Waikato,42,240, 355,169,3
+Wairarapa,0,8, 369,297,0
+Waitematā,239,787, 330,116,0
+West Coast,0,5, 223,358,
+Whanganui,0,9, 344,258,0
