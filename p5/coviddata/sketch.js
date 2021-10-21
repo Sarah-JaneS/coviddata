@@ -54,7 +54,6 @@ function total() {
     const x = table.getNum (r, "X");
     const y = table.getNum (r, "Y");
     const size = map(cases, 0, 1350, 0, 100)
-    //ellipse (x, y, size)
     stroke('white')
     fill(13,199,32,80)
     ellipse(x - size/2 , y - size/2, size, size)
