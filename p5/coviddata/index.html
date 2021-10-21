@@ -4,53 +4,104 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Covid Data in NZ</title>
+  <meta name="description" content="Covid data in New Zealand using MOH Data">
+  <title>Covid data in NZ</title>
+
+  <!--INTERNAL CSS-->
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+   
+    html, body {
+        margin:0;
+        display:grid;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align:center;        
+    }
 
-html, body {
-    display:grid;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align:center;
- 
-}
+    .title {
+      max-width: 100%;
+      border:none;
+      height: 100px;
+      background-color: #ffc728;
+      text-align: center;
+      font-family: 'Rampart One', cursive;
+    }
 
-button {
-  background-color: #ffc728; /* Covid Yellow */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  width: 10%;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
+    /* if screen is large*/
+    @media screen and (min-width: 800px) {
+    button {
+      /* background-color: #ffc728; Covid Yellow */
+      margin-left: 300px;
+      cursor: pointer;
+      border: none;
+      border-radius: 25px;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+    }
+  }
 
-#defaultCanvas0 {
-  width: 100% !important;
-  height: auto !important;
-}
 
-.footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: red;
-   color: white;
-   text-align: center;
-}
+  button {
+      /* background-color: #ffc728; Covid Yellow */
+      cursor: pointer;
+      border: none;
+      border-radius: 25px;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+   #defaultCanvas0 {
+      margin-top: 100px !important;
+      margin-left: 50px;
+   }
+
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: red;
+      color: white;
+      text-align: center;
+      font-style: italic;
+      font-family: "Lucida Console", "Courier New", monospace;
+    }
+
+    .topbar {
+      width: 100%;
+      background-color: #F4A704;
+      color: black;
+      text-align: center;
+      font-family: "Lucida Console", "Courier New", monospace;
+
+    }
+
   </style>
-  
 </head>
 
+
 <body>
+  <div class="title">
+    <h1>Covid data in NZ</h1>
+  </div>
+
+  <div class="topbar">
+    <p>Click the buttons to show/hide data.</p>
+    <p>Bubble size = number of cases by location.</p>
+  </div>
+
+
   <script src="p5.min.js"></script>
   <script src="sketch.js"></script>
+
+  <div class="footer">
+    <p>Updated: 18th October 2021</p>
+  </div>
 </body>
-
-<div class="footer">
-  <p>This was last updated: 18th October 2021</p>
-</div>
-
 </html>
