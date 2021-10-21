@@ -2,7 +2,7 @@
 //Loads Map, Data and Bubble
 function preload() {
   table = loadTable ('coviddatanz.csv', 'csv', 'header');
-  bubble = loadImage ('img/bacteria2.svg')
+  //bubble = loadImage ('img/bacteria2.svg')
   nz = loadImage('img/map.svg');
 }
 
